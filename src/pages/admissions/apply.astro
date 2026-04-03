@@ -1,0 +1,133 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { baseUrl } from '../../lib/base-url';
+
+const pageClass = 'apply-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Apply</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Begin your journey with St. Mark's</p>
+    </div>
+  </section>
+
+  {/* Introduction */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Ready to Apply?</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        We're excited that you're ready to take the next step! Our application process is designed to help us get to know your family and ensure that St. Mark's is the right fit for your child.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+        Before you begin, we strongly encourage you to visit our campus and meet with our admissions team.
+      </p>
+    </div>
+  </section>
+
+  {/* Application Requirements */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Application Requirements</h2>
+      
+      <div style="display: grid; gap: 24px;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-family: var(--heading-font); font-size: 24px; color: #F7F3EA; font-weight: 600;">1</span>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Completed Application Form</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+                Fill out our online application with basic family and student information. There is a $75 non-refundable application fee per family.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-family: var(--heading-font); font-size: 24px; color: #F7F3EA; font-weight: 600;">2</span>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Family Statement</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+                Write a brief statement (1-2 pages) sharing why you're interested in St. Mark's, your educational goals for your child, and how your family's values align with our mission.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-family: var(--heading-font); font-size: 24px; color: #F7F3EA; font-weight: 600;">3</span>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Student Records</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 12px;">
+                For students currently enrolled in another school, please provide:
+              </p>
+              <ul style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7; padding-left: 20px;">
+                <li style="margin-bottom: 8px;">Most recent report card</li>
+                <li style="margin-bottom: 8px;">Standardized test scores (if available)</li>
+                <li style="margin-bottom: 8px;">Teacher recommendation form</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-family: var(--heading-font); font-size: 24px; color: #F7F3EA; font-weight: 600;">4</span>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Pastor Reference</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+                We ask for a reference from your pastor or a church leader who knows your family. This helps us understand your family's faith commitment and community involvement.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <span style="font-family: var(--heading-font); font-size: 24px; color: #F7F3EA; font-weight: 600;">5</span>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Family Interview</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+                Once your application materials are complete, we'll schedule a family interview with our head of school and admissions director.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Start Application CTA */}
+  <section style="background-color: #123EAB; padding: 96px 24px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #F7F3EA; margin-bottom: 32px; font-weight: 600;">Start Your Application</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #F7F3EA; line-height: 1.8; margin-bottom: 40px;">
+        Ready to begin? Contact our admissions office to receive the application portal link.
+      </p>
+      <a href="mailto:info@stmarkchristian.school?subject=Application Request" style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 20px; font-weight: 600; padding: 18px 48px; border-radius: 6px; text-decoration: none;">
+        Request Application
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

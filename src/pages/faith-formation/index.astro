@@ -1,0 +1,195 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { baseUrl } from '../../lib/base-url';
+
+const pageClass = 'faith-formation-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 400px; background-image: url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Faith & Formation</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Cultivating wisdom, virtue, and love for Christ</p>
+    </div>
+  </section>
+
+  {/* Introduction */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Education for the Whole Person</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        At St. Mark's, education is about more than academics. We seek to form students who love God, love learning, and love their neighbor.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+        Our approach integrates faith and learning, recognizing that all truth is God's truth and that every subject reveals something of His character and creation.
+      </p>
+    </div>
+  </section>
+
+  {/* Core Values */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Our Formation Pillars</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4; text-align: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px;">
+            ✝️
+          </div>
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Christ-Centered</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Jesus Christ is the foundation of all we do. We teach students to see the world through the lens of Scripture and the historic Christian faith.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4; text-align: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px;">
+            📚
+          </div>
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Classically Grounded</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            We recover the wisdom of the classical tradition, training students in grammar, logic, and rhetoric to think clearly and communicate persuasively.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4; text-align: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px;">
+            🌱
+          </div>
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Developmentally Appropriate</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Drawing from Montessori insights, we respect each child's developmental stage, fostering independence and a natural love of learning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Educational Philosophy Links */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Our Educational Approach</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        <a href={`${baseUrl}/faith-formation/christian-education`} style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; transition: transform 0.2s;">
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 30px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Christian Education</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+              Learn how we integrate faith with every aspect of learning, from math and science to literature and history.
+            </p>
+          </div>
+          <div style="font-size: 32px; color: #C8A64E;">→</div>
+        </a>
+
+        <a href={`${baseUrl}/faith-formation/montessori-method`} style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; transition: transform 0.2s;">
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 30px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">The Montessori Method</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+              Discover how Montessori principles shape our Early Childhood program and cultivate independence and wonder.
+            </p>
+          </div>
+          <div style="font-size: 32px; color: #C8A64E;">→</div>
+        </a>
+
+        <a href={`${baseUrl}/faith-formation/classical-education`} style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; transition: transform 0.2s;">
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 30px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Classical Christian Education</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+              Explore the time-tested methods of classical education and how they cultivate wisdom and virtue.
+            </p>
+          </div>
+          <div style="font-size: 32px; color: #C8A64E;">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Spiritual Life */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Spiritual Life at St. Mark's</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Weekly Chapel</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Students gather each week for worship, Scripture reading, and teaching. Chapel services follow the Orthodox liturgical calendar and include hymn singing, prayer, and age-appropriate homilies.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Daily Prayer & Scripture</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Each day begins and ends with prayer. Students memorize Scripture, the Lord's Prayer, the Creed, and other historic prayers of the Church. Bible stories and passages are woven throughout the curriculum.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Service & Outreach</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Students learn to love their neighbors through service projects, community partnerships, and acts of kindness. We seek to form servant hearts that reflect Christ's love.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Feast Days & Traditions</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            We celebrate major feast days of the Christian calendar—Advent, Christmas, Lent, Pascha (Easter)—through special chapel services, classroom activities, and family events that deepen students' understanding of the faith.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Virtue Formation */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Forming Character & Virtue</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; margin-bottom: 32px;">
+        Education is not merely about filling the mind with facts, but about forming the heart and character. We seek to cultivate virtues such as:
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 40px;">
+        <div style="background-color: #FCFBF7; padding: 24px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Wisdom</p>
+        </div>
+        <div style="background-color: #FCFBF7; padding: 24px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Courage</p>
+        </div>
+        <div style="background-color: #FCFBF7; padding: 24px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Self-Control</p>
+        </div>
+        <div style="background-color: #FCFBF7; padding: 24px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Justice</p>
+        </div>
+        <div style="background-color: #FCFBF7; padding: 24px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Kindness</p>
+        </div>
+        <div style="background-color: #FCFBF7; padding: 24px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Humility</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Experience Our Community</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        The best way to understand our approach is to see it in action. Schedule a visit to observe our classrooms and meet our community.
+      </p>
+      <a href={`${baseUrl}/admissions/visit`} style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+        Schedule a Visit
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

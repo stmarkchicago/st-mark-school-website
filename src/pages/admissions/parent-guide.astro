@@ -1,0 +1,10 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import ParentGuideLanding from '../../components/ParentGuideLanding';
+
+const pageClass = 'parent-guide-landing';
+---
+
+<MainLayout pageClass={pageClass}>
+  <ParentGuideLanding client:only="react" />
+</MainLayout>

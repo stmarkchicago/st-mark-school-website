@@ -1,0 +1,113 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { baseUrl } from '../../lib/base-url';
+
+const pageClass = 'community-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  <section style="position: relative; height: 400px; background-image: url(https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Community</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">More than a school—a family</p>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Welcome to the St. Mark's Family</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        At St. Mark's, community is at the heart of everything we do. We believe that families, teachers, and students thrive when they're part of a supportive, Christ-centered community united by shared values and mission.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+        Our school is more than an institution—it's a family where lasting friendships are formed, children are known and loved, and parents partner together in the vital work of education.
+      </p>
+    </div>
+  </section>
+
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Ways to Connect</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        <a href={`${baseUrl}/community/events`} style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;">
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 30px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Events & Calendar</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+              Stay connected with upcoming events, feast day celebrations, parent education nights, and community gatherings.
+            </p>
+          </div>
+          <div style="font-size: 32px; color: #C8A64E;">→</div>
+        </a>
+
+        <a href={`${baseUrl}/community/testimonials`} style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;">
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 30px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Family Testimonials</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+              Hear from current families about their experience in the St. Mark's community.
+            </p>
+          </div>
+          <div style="font-size: 32px; color: #C8A64E;">→</div>
+        </a>
+
+        <a href={`${baseUrl}/community/news`} style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;">
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 30px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">News & Stories</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+              Read the latest news, classroom highlights, and stories from our school community.
+            </p>
+          </div>
+          <div style="font-size: 32px; color: #C8A64E;">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Parent Partnership</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Volunteer Opportunities</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Parents can volunteer in classrooms, assist with field trips, help with special events, or serve on committees. Your involvement enriches our school community.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Parent Education</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            We host regular parent education nights on topics like classical education, faith formation, and parenting. These gatherings help parents understand and support our mission.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Family Events</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Throughout the year, we gather for picnics, feast day celebrations, performances, and community service projects. These events build lasting friendships and create cherished memories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Join Our Community</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        We'd love to welcome your family into the St. Mark's community. Schedule a visit to experience our warm, Christ-centered environment.
+      </p>
+      <a href={`${baseUrl}/admissions/visit`} style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+        Schedule a Visit
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

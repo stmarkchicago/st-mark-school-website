@@ -1,0 +1,148 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'classical-education-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Classical Christian Education</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Wisdom and eloquence through time-tested methods</p>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">What is Classical Education?</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        Classical education recovers the time-honored methods of teaching and learning that have formed great minds for over two thousand years. Rather than treating education as mere job training or information transfer, classical education aims to cultivate wisdom, virtue, and eloquence.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8;">
+        When combined with Christian faith, classical education provides a rich framework for understanding the world, engaging great ideas, and pursuing truth, goodness, and beauty.
+      </p>
+    </div>
+  </section>
+
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">The Trivium: Grammar, Logic, Rhetoric</h2>
+      <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; text-align: center; margin-bottom: 48px;">
+        Classical education organizes learning around three stages that correspond to natural phases of child development:
+      </p>
+      
+      <div style="display: grid; gap: 32px;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Grammar Stage (K-6th grade)</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 16px;">
+            Young children love to memorize, chant, and sing. During the Grammar stage, we focus on:
+          </p>
+          <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; padding-left: 24px;">
+            <li style="margin-bottom: 8px;">Building a strong foundation of facts and knowledge</li>
+            <li style="margin-bottom: 8px;">Memorizing poetry, Scripture, math facts, and grammar rules</li>
+            <li style="margin-bottom: 8px;">Developing skills in reading, writing, and basic arithmetic</li>
+            <li style="margin-bottom: 8px;">Absorbing stories from history, literature, and the Bible</li>
+          </ul>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Logic Stage (7th-9th grade)</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 16px;">
+            As students enter adolescence, they naturally become more analytical and argumentative. The Logic stage trains them to:
+          </p>
+          <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; padding-left: 24px;">
+            <li style="margin-bottom: 8px;">Think critically and reason carefully</li>
+            <li style="margin-bottom: 8px;">Understand cause and effect, relationships, and connections</li>
+            <li style="margin-bottom: 8px;">Evaluate arguments and identify fallacies</li>
+            <li style="margin-bottom: 8px;">Ask "why?" and seek deeper understanding</li>
+          </ul>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Rhetoric Stage (10th-12th grade)</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 16px;">
+            Older students are ready to express their own ideas persuasively and beautifully. The Rhetoric stage develops:
+          </p>
+          <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; padding-left: 24px;">
+            <li style="margin-bottom: 8px;">Eloquent written and oral communication</li>
+            <li style="margin-bottom: 8px;">Original thought and creative expression</li>
+            <li style="margin-bottom: 8px;">Persuasive argumentation grounded in truth</li>
+            <li style="margin-bottom: 8px;">Synthesis of knowledge across disciplines</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px; padding: 32px; background-color: #DDF6FF; border-radius: 8px; border: 1px solid #123EAB;">
+        <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7; font-style: italic;">
+          <strong>Note:</strong> St. Mark's currently serves students through 6th grade (Grammar stage), with plans to expand to 8th grade in the near future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Classical Christian Distinctives</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Great Books & Primary Sources</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Rather than relying on textbooks, we engage directly with great works of literature, history, and philosophy. Students read Homer, Plutarch, Shakespeare, and the Church Fathers—encountering the greatest minds in conversation across time.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Latin & the Classics</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            We teach Latin beginning in elementary grades. Latin builds vocabulary, strengthens grammar skills, and opens the door to Western civilization's intellectual heritage. It also prepares students for learning other languages.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Socratic Discussion</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Teachers guide students through thoughtful questions rather than simply delivering information. This cultivates critical thinking, careful listening, and humble inquiry—the marks of a truly educated person.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Integrated Curriculum</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Subjects aren't taught in isolation. History connects to literature, literature to theology, theology to science. Students see the unity of all knowledge and its source in God.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">The Goal: Wisdom & Virtue</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        Classical Christian education aims to produce graduates who are:
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px;">
+        <div style="background-color: #F7F3EA; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Thoughtful & Articulate</p>
+        </div>
+        <div style="background-color: #F7F3EA; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Lovers of Truth</p>
+        </div>
+        <div style="background-color: #F7F3EA; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Virtuous & Humble</p>
+        </div>
+        <div style="background-color: #F7F3EA; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">Lifelong Learners</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

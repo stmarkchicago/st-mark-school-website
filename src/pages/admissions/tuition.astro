@@ -1,0 +1,206 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'tuition-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1554224311-beee4ece2433?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Tuition & Financial Aid</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Investing in your child's future</p>
+    </div>
+  </section>
+
+  {/* Introduction */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+        We believe a Christ-centered, classical education should be accessible to families who share our mission and values. We're committed to working with families to make St. Mark's education affordable.
+      </p>
+    </div>
+  </section>
+
+  {/* Tuition Rates */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">2026-2027 Tuition Rates</h2>
+      
+      <div style="display: grid; gap: 24px;">
+        {/* Early Childhood */}
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">Early Childhood Program</h3>
+          <div style="display: grid; gap: 16px;">
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 16px 0; border-bottom: 1px solid #D8D2C4;">
+              <p style="font-family: var(--body-font); font-size: 18px; color: #26303D;">Infant/Toddler (6 weeks - 3 years)</p>
+              <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">$14,500</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 16px 0; border-bottom: 1px solid #D8D2C4;">
+              <p style="font-family: var(--body-font); font-size: 18px; color: #26303D;">Preschool (Ages 3-4)</p>
+              <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">$11,800</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 16px 0;">
+              <p style="font-family: var(--body-font); font-size: 18px; color: #26303D;">Pre-K/Kindergarten (Ages 4-6)</p>
+              <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">$12,400</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Elementary */}
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">Elementary Program</h3>
+          <div style="display: grid; gap: 16px;">
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 16px 0;">
+              <p style="font-family: var(--body-font); font-size: 18px; color: #26303D;">Grades 1-6</p>
+              <p style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; font-weight: 600;">$13,200</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px; padding: 32px; background-color: #DDF6FF; border-radius: 8px; border: 1px solid #123EAB;">
+        <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+          <strong>Multi-Child Discount:</strong> Families with multiple children enrolled receive a 10% discount on tuition for the second child and 15% for each additional child.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* What's Included */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">What's Included in Tuition</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">✓ All Instruction</p>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Core academics, specials, and enrichment classes
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">✓ Materials & Supplies</p>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Curriculum, textbooks, and classroom materials
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">✓ Field Trips</p>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Educational excursions throughout the year
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">✓ Technology</p>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Access to computers and educational technology
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">✓ Lunch Program</p>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Nutritious hot lunch available daily
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <p style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">✓ Extended Care</p>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Before and after school care available
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Financial Aid */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; text-align: center; font-weight: 600;">Financial Assistance</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; text-align: center; margin-bottom: 48px;">
+        We believe no family should be turned away due to financial circumstances. We offer need-based financial aid to qualifying families.
+      </p>
+
+      <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; margin-bottom: 32px;">
+        <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">How Financial Aid Works</h3>
+        <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9; padding-left: 24px;">
+          <li style="margin-bottom: 16px;">Applications are reviewed confidentially by our financial aid committee</li>
+          <li style="margin-bottom: 16px;">Awards are based on demonstrated financial need</li>
+          <li style="margin-bottom: 16px;">Aid ranges from 10% to 75% of tuition</li>
+          <li style="margin-bottom: 16px;">Financial aid is renewable annually with updated application</li>
+          <li style="margin-bottom: 16px;">Priority consideration given to applications submitted by February 1</li>
+        </ul>
+      </div>
+
+      <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+        <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">How to Apply for Financial Aid</h3>
+        <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+          To apply for financial assistance, complete the financial aid application (available from our admissions office) and submit:
+        </p>
+        <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; padding-left: 24px; margin-bottom: 24px;">
+          <li style="margin-bottom: 12px;">Most recent tax return</li>
+          <li style="margin-bottom: 12px;">Recent pay stubs</li>
+          <li style="margin-bottom: 12px;">Financial aid application form</li>
+        </ul>
+        <p style="font-family: var(--body-font); font-size: 16px; color: #7d797a; font-style: italic;">
+          All information is kept strictly confidential.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Payment Plans */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Payment Options</h2>
+      
+      <div style="display: grid; gap: 24px;">
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Annual Payment (5% discount)</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Pay full tuition by August 1 and receive a 5% discount.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Semi-Annual Payment (2% discount)</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Two payments: 50% due August 1, 50% due January 1. Receive a 2% discount.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Monthly Payment Plan</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Spread payments over 10 months (August - May) via automatic bank draft.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Questions About Tuition?</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        We're happy to discuss tuition and financial aid options with your family.
+      </p>
+      <a href="mailto:info@stmarkchristian.school" style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+        Contact Admissions
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

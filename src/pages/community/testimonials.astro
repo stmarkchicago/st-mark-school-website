@@ -1,0 +1,84 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'testimonials-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Family Testimonials</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Hear from our community</p>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="display: grid; gap: 40px;">
+        
+        <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; position: relative;">
+          <div style="font-size: 48px; color: #123EAB; opacity: 0.2; position: absolute; top: 20px; left: 30px; line-height: 1;">"</div>
+          <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding: 0 20px;">
+            St. Mark's has been a blessing to our family. Our children love learning, they're growing in their faith, and they're surrounded by teachers and families who share our values. We couldn't ask for a better school community.
+          </p>
+          <div style="padding-left: 20px;">
+            <p style="font-family: var(--heading-font); font-size: 18px; color: #123EAB; font-weight: 600;">— Sarah & Michael K.</p>
+            <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">Parents of students in Kindergarten and 3rd Grade</p>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; position: relative;">
+          <div style="font-size: 48px; color: #123EAB; opacity: 0.2; position: absolute; top: 20px; left: 30px; line-height: 1;">"</div>
+          <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding: 0 20px;">
+            The Montessori approach in the early childhood program has been transformative for our daughter. She's independent, curious, and loves going to school every day. The Christian foundation gives us peace of mind that she's learning in an environment aligned with our faith.
+          </p>
+          <div style="padding-left: 20px;">
+            <p style="font-family: var(--heading-font); font-size: 18px; color: #123EAB; font-weight: 600;">— Jennifer T.</p>
+            <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">Parent of a Preschool student</p>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; position: relative;">
+          <div style="font-size: 48px; color: #123EAB; opacity: 0.2; position: absolute; top: 20px; left: 30px; line-height: 1;">"</div>
+          <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding: 0 20px;">
+            We chose St. Mark's for the classical curriculum and have been amazed at how much our son has learned. He's reading great books, memorizing Scripture and poetry, and developing a love for learning that will serve him for life. The community of families here is incredibly supportive.
+          </p>
+          <div style="padding-left: 20px;">
+            <p style="font-family: var(--heading-font); font-size: 18px; color: #123EAB; font-weight: 600;">— David & Anna P.</p>
+            <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">Parents of a 5th Grade student</p>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; position: relative;">
+          <div style="font-size: 48px; color: #123EAB; opacity: 0.2; position: absolute; top: 20px; left: 30px; line-height: 1;">"</div>
+          <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding: 0 20px;">
+            As Orthodox Christians, we're thrilled to have found a school that integrates our faith into daily life. The teachers genuinely care about our children's spiritual formation, not just their academic progress. St. Mark's feels like an extension of our church family.
+          </p>
+          <div style="padding-left: 20px;">
+            <p style="font-family: var(--heading-font); font-size: 18px; color: #123EAB; font-weight: 600;">— Father John & Presbytera Maria</p>
+            <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">Parents of students in 1st and 4th Grade</p>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; position: relative;">
+          <div style="font-size: 48px; color: #123EAB; opacity: 0.2; position: absolute; top: 20px; left: 30px; line-height: 1;">"</div>
+          <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding: 0 20px;">
+            We've been part of the St. Mark's community since our oldest was in preschool, and now we have three children enrolled. The consistency, the quality of education, and the warmth of the community keep us here year after year. We're so grateful for this school.
+          </p>
+          <div style="padding-left: 20px;">
+            <p style="font-family: var(--heading-font); font-size: 18px; color: #123EAB; font-weight: 600;">— Elizabeth & Thomas R.</p>
+            <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">Parents of three students</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

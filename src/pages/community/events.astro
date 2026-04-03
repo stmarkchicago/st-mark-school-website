@@ -1,0 +1,121 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'events-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Events & Calendar</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Join us for upcoming events</p>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Upcoming Events</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+            <div style="background-color: #123EAB; padding: 20px; border-radius: 8px; text-align: center;">
+              <div style="font-family: var(--heading-font); font-size: 32px; color: #F7F3EA; font-weight: 600; line-height: 1;">15</div>
+              <div style="font-family: var(--body-font); font-size: 14px; color: #DDF6FF; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px;">April</div>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Pascha (Easter) Celebration</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 12px;">
+                Join us for our annual Pascha celebration! The day includes a special chapel service, egg decorating, and a community potluck lunch.
+              </p>
+              <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">
+                📍 St. Mark's Campus • ⏰ 10:00 AM - 2:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+            <div style="background-color: #123EAB; padding: 20px; border-radius: 8px; text-align: center;">
+              <div style="font-family: var(--heading-font); font-size: 32px; color: #F7F3EA; font-weight: 600; line-height: 1;">22</div>
+              <div style="font-family: var(--body-font); font-size: 14px; color: #DDF6FF; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px;">April</div>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Parent Education Night: Classical Education</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 12px;">
+                Learn more about the classical model and how it shapes our curriculum. Led by our Head of School.
+              </p>
+              <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">
+                📍 School Library • ⏰ 7:00 PM - 8:30 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+            <div style="background-color: #123EAB; padding: 20px; border-radius: 8px; text-align: center;">
+              <div style="font-family: var(--heading-font); font-size: 32px; color: #F7F3EA; font-weight: 600; line-height: 1;">5</div>
+              <div style="font-family: var(--body-font); font-size: 14px; color: #DDF6FF; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px;">May</div>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Spring Concert & Art Show</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 12px;">
+                Students showcase their musical talents and artistic creations. All families and friends are welcome!
+              </p>
+              <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">
+                📍 School Auditorium • ⏰ 6:00 PM - 8:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+            <div style="background-color: #123EAB; padding: 20px; border-radius: 8px; text-align: center;">
+              <div style="font-family: var(--heading-font); font-size: 32px; color: #F7F3EA; font-weight: 600; line-height: 1;">19</div>
+              <div style="font-family: var(--body-font); font-size: 14px; color: #DDF6FF; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px;">May</div>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">End-of-Year Field Day</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 12px;">
+                A fun-filled day of outdoor games, relay races, and community time. Parents are encouraged to attend!
+              </p>
+              <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">
+                📍 School Grounds • ⏰ 9:00 AM - 12:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+            <div style="background-color: #123EAB; padding: 20px; border-radius: 8px; text-align: center;">
+              <div style="font-family: var(--heading-font); font-size: 32px; color: #F7F3EA; font-weight: 600; line-height: 1;">2</div>
+              <div style="font-family: var(--body-font); font-size: 14px; color: #DDF6FF; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px;">June</div>
+            </div>
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Closing Chapel & Graduation</h3>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 12px;">
+                We conclude the school year with a chapel service and celebrate our graduating 6th graders. Families are invited to stay for a reception afterward.
+              </p>
+              <p style="font-family: var(--body-font); font-size: 15px; color: #7d797a;">
+                📍 School Chapel • ⏰ 10:00 AM - 12:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

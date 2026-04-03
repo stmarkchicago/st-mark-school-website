@@ -1,0 +1,205 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'visit-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Visit St. Mark's</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Experience our community firsthand</p>
+    </div>
+  </section>
+
+  {/* Introduction */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Come See Us in Action</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        There's no better way to understand St. Mark's than to visit our campus, observe our classrooms, and meet our students and faculty.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+        We offer personalized tours throughout the school year. Each visit includes a campus tour, classroom observations, and time to meet with our admissions director and head of school.
+      </p>
+    </div>
+  </section>
+
+  {/* Visit Options */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Visit Options</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        {/* Personal Tour */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">Personal Campus Tour</h3>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            Schedule a personalized tour during school hours to observe our students and teachers in their learning environments. Tours typically last 60-90 minutes.
+          </p>
+          <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; padding-left: 20px; margin-bottom: 24px;">
+            <li style="margin-bottom: 12px;">Visit multiple classrooms across different age groups</li>
+            <li style="margin-bottom: 12px;">Meet our faculty and see teaching methods in action</li>
+            <li style="margin-bottom: 12px;">Tour our facilities and learning spaces</li>
+            <li style="margin-bottom: 12px;">Ask questions and learn about our programs</li>
+            <li style="margin-bottom: 12px;">Available Monday-Friday during school hours</li>
+          </ul>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #7d797a; font-style: italic;">
+            <strong>Recommended for:</strong> Families seriously considering St. Mark's who want an in-depth look at our programs.
+          </p>
+        </div>
+
+        {/* Open House */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">Open House Events</h3>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            Join us for one of our seasonal open houses, where you can meet current families, tour the campus, and learn about our educational approach in a relaxed group setting.
+          </p>
+          <div style="background-color: #FCFBF7; padding: 24px; border-radius: 6px; margin-bottom: 24px; border: 1px solid #D8D2C4;">
+            <h4 style="font-family: var(--heading-font); font-size: 20px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Upcoming Open Houses:</h4>
+            <div style="display: grid; gap: 12px;">
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;"><strong>Spring Open House:</strong> Saturday, April 12, 2026 · 10:00 AM - 12:00 PM</p>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;"><strong>Fall Preview Day:</strong> Saturday, October 18, 2026 · 9:00 AM - 11:00 AM</p>
+            </div>
+          </div>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #7d797a; font-style: italic;">
+            <strong>Recommended for:</strong> Families in the early stages of exploration who want a casual introduction to St. Mark's.
+          </p>
+        </div>
+
+        {/* Shadow Day */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">Student Shadow Day</h3>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            For families who have already toured and are seriously considering enrollment, we offer shadow days where prospective students can spend a morning or full day in a classroom with their future peers.
+          </p>
+          <ul style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; padding-left: 20px; margin-bottom: 24px;">
+            <li style="margin-bottom: 12px;">Student attends class for half or full day</li>
+            <li style="margin-bottom: 12px;">Participates in lessons, activities, and lunch</li>
+            <li style="margin-bottom: 12px;">Gets a feel for classroom culture and daily rhythm</li>
+            <li style="margin-bottom: 12px;">Teacher provides feedback to parents afterward</li>
+          </ul>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #7d797a; font-style: italic;">
+            <strong>Recommended for:</strong> Applicant families who have submitted applications (by invitation only).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Schedule Form */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 24px; text-align: center; font-weight: 600;">Schedule Your Visit</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.7; text-align: center; margin-bottom: 48px;">
+        Fill out the form below and we'll contact you within 24 hours to confirm your visit date and time.
+      </p>
+
+      <div style="background-color: #FCFBF7; padding: 56px; border-radius: 8px; border: 1px solid #D8D2C4; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <form>
+          <div style="display: grid; gap: 24px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div>
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">First Name *</label>
+                <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+              </div>
+              <div>
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Last Name *</label>
+                <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+              </div>
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Email *</label>
+              <input type="email" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Phone *</label>
+              <input type="tel" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Type of Visit *</label>
+              <select required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;">
+                <option value="">Select visit type</option>
+                <option value="personal-tour">Personal Campus Tour</option>
+                <option value="open-house">Open House Event</option>
+                <option value="shadow-day">Student Shadow Day (by invitation)</option>
+              </select>
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Preferred Date(s) *</label>
+              <input type="text" required placeholder="e.g., March 15 or week of March 15" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Number of Adults Attending</label>
+              <input type="number" min="1" max="10" value="2" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Grade Level(s) of Interest</label>
+              <input type="text" placeholder="e.g., Kindergarten, Grade 3" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+            </div>
+
+            <div>
+              <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Questions or Special Requests</label>
+              <textarea rows="4" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;"></textarea>
+            </div>
+
+            <div style="padding-top: 16px;">
+              <button type="submit" style="width: 100%; background-color: #123EAB; color: #F7F3EA; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px; border: none; border-radius: 6px; cursor: pointer;">
+                Request Visit
+              </button>
+              <p style="font-family: var(--body-font); font-size: 14px; color: #7d797a; text-align: center; margin-top: 16px;">
+                We'll confirm your visit within 24 hours.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  {/* Directions */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Directions & Parking</h2>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">Our Location</h3>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 16px;">
+            <strong>St. Mark Christian School</strong><br />
+            15W455 79th St<br />
+            Burr Ridge, IL 60527
+          </p>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 16px;">
+            📞 (630) 986-1100<br />
+            ✉️ info@stmarkchristian.school
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">Visitor Parking</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 16px;">
+            Visitor parking is available in the main lot on the east side of the building. Please check in at the front office upon arrival.
+          </p>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            For your first visit, we recommend arriving 5-10 minutes early.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

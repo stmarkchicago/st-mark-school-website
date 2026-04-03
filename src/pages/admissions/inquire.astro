@@ -1,0 +1,160 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'inquire-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Inquire</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">We're excited to hear from you</p>
+    </div>
+  </section>
+
+  {/* Form Section */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+          Fill out the form below and we'll send you information about our programs, admissions process, and upcoming events. There's no obligation—we simply want to help you learn more about St. Mark's.
+        </p>
+      </div>
+
+      <div style="background-color: #FCFBF7; padding: 56px; border-radius: 8px; border: 1px solid #D8D2C4; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <form>
+          <div style="display: grid; gap: 24px;">
+            {/* Parent/Guardian Information */}
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">Parent/Guardian Information</h3>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                  <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">First Name *</label>
+                  <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+                </div>
+                <div>
+                  <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Last Name *</label>
+                  <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+                </div>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Email *</label>
+                <input type="email" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Phone *</label>
+                <input type="tel" required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">City, State</label>
+                <input type="text" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" />
+              </div>
+            </div>
+
+            {/* Student Information */}
+            <div style="padding-top: 32px; border-top: 2px solid #D8D2C4;">
+              <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">Student Information</h3>
+              
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Student Name(s) & Age(s) *</label>
+                <textarea required rows="3" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" placeholder="e.g., John (age 5), Sarah (age 7)"></textarea>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Grade Level(s) Interested In *</label>
+                <select required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;">
+                  <option value="">Select grade level</option>
+                  <option value="infant-toddler">Infant/Toddler (6 weeks - 3 years)</option>
+                  <option value="preschool">Preschool (Ages 3-4)</option>
+                  <option value="prek-k">Pre-K/Kindergarten (Ages 4-6)</option>
+                  <option value="grade-1">Grade 1</option>
+                  <option value="grade-2">Grade 2</option>
+                  <option value="grade-3">Grade 3</option>
+                  <option value="grade-4">Grade 4</option>
+                  <option value="grade-5">Grade 5</option>
+                  <option value="grade-6">Grade 6</option>
+                  <option value="multiple">Multiple grades</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Expected Start Date *</label>
+                <select required style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;">
+                  <option value="">Select start date</option>
+                  <option value="fall-2026">Fall 2026</option>
+                  <option value="spring-2027">Spring 2027</option>
+                  <option value="fall-2027">Fall 2027</option>
+                  <option value="undecided">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div style="padding-top: 32px; border-top: 2px solid #D8D2C4;">
+              <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">Tell Us More</h3>
+              
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">How did you hear about St. Mark's?</label>
+                <select style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;">
+                  <option value="">Select one</option>
+                  <option value="website">Website search</option>
+                  <option value="social-media">Social media</option>
+                  <option value="friend">Friend or family referral</option>
+                  <option value="current-family">Current St. Mark's family</option>
+                  <option value="church">Church</option>
+                  <option value="event">Event or open house</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="font-family: var(--body-font); font-size: 15px; color: #26303D; font-weight: 600; display: block; margin-bottom: 8px;">Questions or Comments</label>
+                <textarea rows="4" style="width: 100%; padding: 12px; border: 1px solid #D8D2C4; border-radius: 4px; font-family: var(--body-font); font-size: 16px;" placeholder="Is there anything specific you'd like to know?"></textarea>
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <div style="padding-top: 24px;">
+              <button type="submit" style="width: 100%; background-color: #123EAB; color: #F7F3EA; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px; border: none; border-radius: 6px; cursor: pointer; transition: opacity 0.2s;">
+                Submit Inquiry
+              </button>
+              <p style="font-family: var(--body-font); font-size: 14px; color: #7d797a; text-align: center; margin-top: 16px;">
+                We'll respond to your inquiry within 1-2 business days.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  {/* Contact Info */}
+  <section style="background-color: #FCFBF7; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 36px; color: #123EAB; margin-bottom: 24px; font-weight: 600;">Prefer to Contact Us Directly?</h2>
+      <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.7; margin-bottom: 24px;">
+        Feel free to call or email our admissions office with any questions.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+        <a href="tel:6309861100" style="font-family: var(--body-font); font-size: 18px; color: #123EAB; text-decoration: none; font-weight: 600;">
+          📞 (630) 986-1100
+        </a>
+        <a href="mailto:info@stmarkchristian.school" style="font-family: var(--body-font); font-size: 18px; color: #123EAB; text-decoration: none; font-weight: 600;">
+          ✉️ info@stmarkchristian.school
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

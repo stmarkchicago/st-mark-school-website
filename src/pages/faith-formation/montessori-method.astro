@@ -1,0 +1,97 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'montessori-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">The Montessori Method</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Nurturing independence, wonder, and love of learning</p>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">What is Montessori?</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        The Montessori method, developed by Dr. Maria Montessori over a century ago, is an educational approach grounded in careful observation of how children naturally learn. It emphasizes hands-on discovery, self-directed activity, and respect for each child's unique developmental timeline.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8;">
+        At St. Mark's, we've found that Montessori principles align beautifully with classical Christian education: both honor the child as an image-bearer of God, both cultivate wonder and independence, and both recognize that true education forms the whole person—body, mind, and soul.
+      </p>
+    </div>
+  </section>
+
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Core Montessori Principles</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Prepared Environment</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            The classroom is carefully designed to be beautiful, orderly, and accessible. Every material has a purpose and a place. This environment invites exploration and fosters concentration, independence, and a sense of peace.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Child-Directed Learning</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Children choose their own work from among the materials available in the classroom. This freedom cultivates intrinsic motivation and teaches them to take responsibility for their own learning.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Hands-On Materials</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Montessori materials are concrete, beautiful, and carefully designed to isolate specific concepts. Children learn through touch, movement, and manipulation—engaging all their senses in the process of discovery.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Mixed-Age Classrooms</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Our classrooms include children of multiple ages working side by side. Older children become mentors and models, while younger children learn from observing and aspiring. This fosters collaboration, empathy, and community.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Respect for the Child</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Montessori education is built on profound respect for children as unique individuals created in the image of God. We honor their natural developmental rhythms, their need for independence, and their capacity for self-discipline and concentration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Montessori + Classical + Christian</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; text-align: center; margin-bottom: 40px;">
+        We've thoughtfully integrated Montessori principles with classical Christian education to create a unique approach:
+      </p>
+      
+      <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; margin-bottom: 32px;">
+        <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+          <strong style="color: #123EAB;">In Early Childhood (ages 6 weeks - 6 years):</strong> We use the Montessori method fully, creating prepared environments where children develop independence, concentration, and a love of order—all while being immersed in the stories, songs, and prayers of the Christian faith.
+        </p>
+      </div>
+
+      <div style="background-color: #FCFBF7; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+        <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+          <strong style="color: #123EAB;">In Elementary (grades 1-6):</strong> We transition to a more structured classical model while retaining the best of Montessori: respect for the child, hands-on learning, and cultivation of intrinsic motivation. Students experience the rigor of classical academics within a nurturing, developmentally-appropriate environment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

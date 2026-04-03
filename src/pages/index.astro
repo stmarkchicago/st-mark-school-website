@@ -1,0 +1,26 @@
+---
+import MainLayout from '../layouts/main.astro';
+import Hero from '../components/Hero';
+import IdentityBar from '../components/IdentityBar';
+import ProgramsSection from '../components/ProgramsSection';
+import WhyStMarks from '../components/WhyStMarks';
+import AboutSection from '../components/AboutSection';
+import FaithSection from '../components/FaithSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import AdmissionsCTA from '../components/AdmissionsCTA';
+import Footer from '../components/Footer';
+
+const pageClass = 'home';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Hero client:only="react" />
+  <IdentityBar client:only="react" />
+  <ProgramsSection client:only="react" />
+  <WhyStMarks client:only="react" />
+  <AboutSection client:only="react" />
+  <FaithSection client:only="react" />
+  <TestimonialsSection client:only="react" />
+  <AdmissionsCTA client:only="react" />
+  <Footer client:only="react" />
+</MainLayout>

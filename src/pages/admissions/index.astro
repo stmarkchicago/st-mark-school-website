@@ -1,0 +1,186 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { baseUrl } from '../../lib/base-url';
+
+const pageClass = 'admissions-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 400px; background-image: url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Admissions</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Join our community of families committed to Christ-centered education</p>
+    </div>
+  </section>
+
+  {/* Welcome */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Welcome to St. Mark's</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        We're delighted that you're considering St. Mark Christian School for your family. The admissions process is designed to help you get to know us—and for us to get to know you.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8;">
+        We believe that education is a partnership between school and family, and we seek families who share our commitment to Christ-centered, classical education.
+      </p>
+    </div>
+  </section>
+
+  {/* Admissions Steps */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">The Admissions Process</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        {/* Step 1 */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; display: grid; grid-template-columns: 120px 1fr; gap: 40px; align-items: start;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--heading-font); font-size: 48px; color: #F7F3EA; font-weight: 600;">1</span>
+          </div>
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Inquire</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+              Fill out our inquiry form to express your interest. We'll send you information about our programs, philosophy, and community.
+            </p>
+            <a href={`${baseUrl}/admissions/inquire`} style="display: inline-block; background-color: #123EAB; color: #F7F3EA; font-family: var(--button-font); font-size: 17px; font-weight: 600; padding: 12px 28px; border-radius: 6px; text-decoration: none;">
+              Submit Inquiry →
+            </a>
+          </div>
+        </div>
+
+        {/* Step 2 */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; display: grid; grid-template-columns: 120px 1fr; gap: 40px; align-items: start;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--heading-font); font-size: 48px; color: #F7F3EA; font-weight: 600;">2</span>
+          </div>
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Visit</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+              Schedule a campus tour and classroom observation. Meet our faculty, see our students in action, and experience the St. Mark's difference firsthand.
+            </p>
+            <a href={`${baseUrl}/admissions/visit`} style="display: inline-block; background-color: #123EAB; color: #F7F3EA; font-family: var(--button-font); font-size: 17px; font-weight: 600; padding: 12px 28px; border-radius: 6px; text-decoration: none;">
+              Schedule Visit →
+            </a>
+          </div>
+        </div>
+
+        {/* Step 3 */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; display: grid; grid-template-columns: 120px 1fr; gap: 40px; align-items: start;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--heading-font); font-size: 48px; color: #F7F3EA; font-weight: 600;">3</span>
+          </div>
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Apply</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+              Complete the formal application, including student records, references, and a family statement. Applications are reviewed on a rolling basis.
+            </p>
+            <a href={`${baseUrl}/admissions/apply`} style="display: inline-block; background-color: #123EAB; color: #F7F3EA; font-family: var(--button-font); font-size: 17px; font-weight: 600; padding: 12px 28px; border-radius: 6px; text-decoration: none;">
+              Start Application →
+            </a>
+          </div>
+        </div>
+
+        {/* Step 4 */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4; display: grid; grid-template-columns: 120px 1fr; gap: 40px; align-items: start;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background-color: #123EAB; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--heading-font); font-size: 48px; color: #F7F3EA; font-weight: 600;">4</span>
+          </div>
+          <div>
+            <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Interview & Decision</h3>
+            <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+              Meet with our admissions team and head of school for a family interview. We'll discuss your educational goals and answer any remaining questions. Admission decisions are typically made within two weeks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Quick Links */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Important Information</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+        <a href={`${baseUrl}/admissions/tuition`} style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; transition: transform 0.2s; display: block;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Tuition & Scholarships</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Learn about tuition rates, payment plans, and financial assistance opportunities.
+          </p>
+          <p style="font-family: var(--button-font); font-size: 16px; color: #C8A64E; margin-top: 16px; font-weight: 600;">Learn More →</p>
+        </a>
+
+        <a href={`${baseUrl}/admissions/faqs`} style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; transition: transform 0.2s; display: block;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Frequently Asked Questions</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Find answers to common questions about admissions, programs, and school life.
+          </p>
+          <p style="font-family: var(--button-font); font-size: 16px; color: #C8A64E; margin-top: 16px; font-weight: 600;">Read FAQs →</p>
+        </a>
+
+        <a href={`${baseUrl}/admissions/parent-guide`} style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4; text-decoration: none; transition: transform 0.2s; display: block;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Parent Info Packet</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Download our comprehensive guide for prospective families.
+          </p>
+          <p style="font-family: var(--button-font); font-size: 16px; color: #C8A64E; margin-top: 16px; font-weight: 600;">Get the Guide →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Enrollment Periods */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; text-align: center; font-weight: 600;">Enrollment Information</h2>
+      
+      <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+        <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">Rolling Admissions</h3>
+        <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+          St. Mark's accepts applications on a rolling basis throughout the year, subject to space availability. We encourage families to apply early, as spaces fill quickly.
+        </p>
+        
+        <div style="display: grid; gap: 16px; margin-top: 32px;">
+          <div style="display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 16px 0; border-top: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">Priority Deadline</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">February 1 for fall enrollment</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 16px 0; border-top: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">Regular Decision</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Applications accepted until spaces are filled</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 16px 0; border-top: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">Mid-Year Entry</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Available on a case-by-case basis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Ready to Begin?</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        Take the first step by submitting an inquiry or scheduling a visit.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href={`${baseUrl}/admissions/inquire`} style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+          Inquire Now
+        </a>
+        <a href={`${baseUrl}/admissions/visit`} style="display: inline-block; background-color: transparent; color: #F7F3EA; border: 2px solid #F7F3EA; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 14px 40px; border-radius: 6px; text-decoration: none;">
+          Schedule Visit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

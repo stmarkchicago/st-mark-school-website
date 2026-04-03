@@ -1,0 +1,219 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { baseUrl } from '../../lib/base-url';
+
+const pageClass = 'elementary-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 400px; background-image: url(https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Elementary</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Grades 1–6 · Classical Christian Education</p>
+    </div>
+  </section>
+
+  {/* Overview */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; text-align: center; font-weight: 600;">Classical Education for Young Scholars</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; text-align: center; margin-bottom: 48px;">
+        Our elementary program follows the classical Christian model, building strong foundations in language, mathematics, history, science, and the arts while cultivating wisdom, virtue, and wonder.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 64px;">
+        <div>
+          <div style="height: 400px; background-image: url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);"></div>
+        </div>
+        
+        <div>
+          <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">The Classical Approach</h3>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            Classical education trains students to think clearly, speak eloquently, and reason persuasively. It emphasizes the liberal arts—grammar, logic, and rhetoric—as tools for lifelong learning.
+          </p>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            We study the Great Books, learn Latin, explore history chronologically, and engage with primary sources. Students don't just memorize facts—they fall in love with learning.
+          </p>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+            Most importantly, we ground all learning in the Christian worldview, helping students see how all truth points to God.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Trivium */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 24px; text-align: center; font-weight: 600;">The Trivium: Three Stages of Learning</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; text-align: center; margin-bottom: 64px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        Classical education honors the natural development of children through three stages of learning. At St. Mark's, our elementary program encompasses the first two stages:
+      </p>
+      
+      <div style="display: grid; gap: 32px;">
+        {/* Grammar Stage */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start;">
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 8px; font-weight: 600;">Grammar Stage</h3>
+              <p style="font-family: var(--body-font); font-size: 18px; color: #C8A64E; font-weight: 600;">Grades 1–3</p>
+            </div>
+            <div>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+                Young children naturally love to memorize, chant, and sing. The Grammar Stage capitalizes on this by laying strong foundations of knowledge—facts, rules, vocabulary, and patterns in all subjects.
+              </p>
+              <ul style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.8; padding-left: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Language Arts:</strong> Phonics, spelling, handwriting, grammar, poetry memorization</li>
+                <li style="margin-bottom: 10px;"><strong>Mathematics:</strong> Number sense, operations, skip counting, math facts</li>
+                <li style="margin-bottom: 10px;"><strong>History:</strong> Ancient civilizations through story and timeline</li>
+                <li style="margin-bottom: 10px;"><strong>Science:</strong> Nature study, observation, simple experiments</li>
+                <li style="margin-bottom: 10px;"><strong>Latin:</strong> Introduction to vocabulary and basic grammar</li>
+                <li style="margin-bottom: 10px;"><strong>Bible:</strong> Old Testament narratives and memory verses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Logic Stage */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start;">
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 8px; font-weight: 600;">Logic Stage</h3>
+              <p style="font-family: var(--body-font); font-size: 18px; color: #C8A64E; font-weight: 600;">Grades 4–6</p>
+            </div>
+            <div>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+                As children mature, they begin to ask "why" and "how." The Logic Stage teaches students to think analytically, make connections between subjects, and understand cause and effect.
+              </p>
+              <ul style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.8; padding-left: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Language Arts:</strong> Literature analysis, composition, formal grammar, debate</li>
+                <li style="margin-bottom: 10px;"><strong>Mathematics:</strong> Pre-algebra, problem-solving, mathematical reasoning</li>
+                <li style="margin-bottom: 10px;"><strong>History:</strong> Medieval through modern, cause and effect, primary sources</li>
+                <li style="margin-bottom: 10px;"><strong>Science:</strong> Scientific method, classification, more complex experiments</li>
+                <li style="margin-bottom: 10px;"><strong>Latin:</strong> Advanced grammar, translation, derivatives</li>
+                <li style="margin-bottom: 10px;"><strong>Logic:</strong> Introduction to formal and informal logic</li>
+                <li style="margin-bottom: 10px;"><strong>Bible:</strong> New Testament, systematic theology for children</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Curriculum Highlights */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Curriculum Highlights</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Great Books</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Students read classic literature, fairy tales, myths, legends, and biographies that have shaped Western civilization and Christian thought.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Latin Language</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Latin trains the mind, unlocks English vocabulary and grammar, and provides access to the treasures of Western literature and theology.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Integrated Humanities</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            History, literature, art, and music are studied together chronologically, helping students see connections and understand culture holistically.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Memory Work</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Poetry, Scripture, historical facts, and math facts are committed to memory, furnishing the mind with beauty and truth.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Science & Nature Study</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Students observe, classify, experiment, and develop scientific habits of mind while marveling at God's creation.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Fine Arts</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Art, music, and drama are woven throughout the curriculum, developing creativity and an appreciation for beauty.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Daily Schedule */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; text-align: center; font-weight: 600;">Sample Daily Schedule</h2>
+      
+      <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+        <div style="display: grid; gap: 20px;">
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">8:00 - 8:30</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Morning Assembly & Prayer</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">8:30 - 10:00</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Language Arts (Grammar, Reading, Writing)</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">10:00 - 10:15</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Morning Recess</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">10:15 - 11:30</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Mathematics</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">11:30 - 12:15</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Lunch & Free Play</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">12:15 - 1:15</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">History & Geography</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #D8D2C4;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">1:15 - 2:15</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Science or Latin</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 20px;">
+            <p style="font-family: var(--body-font); font-size: 17px; color: #C8A64E; font-weight: 600;">2:15 - 3:00</p>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D;">Art, Music, PE, or Enrichment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Experience Classical Education</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        Visit our elementary classrooms and see students engaged in rigorous, joyful learning.
+      </p>
+      <a href={`${baseUrl}/admissions/visit`} style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+        Schedule a Visit
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

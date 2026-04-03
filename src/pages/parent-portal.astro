@@ -1,0 +1,14 @@
+---
+import MainLayout from '../layouts/main.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ParentPortal from '../components/ParentPortal';
+
+const pageClass = 'parent-portal';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  <ParentPortal client:only="react" />
+  <Footer client:only="react" />
+</MainLayout>

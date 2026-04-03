@@ -1,0 +1,184 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'faqs-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Frequently Asked Questions</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Find answers to common questions</p>
+    </div>
+  </section>
+
+  {/* Introduction */}
+  <section style="background-color: #F7F3EA; padding: 80px 24px 48px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8;">
+        We've compiled answers to the most common questions from prospective families. If you don't find what you're looking for, please don't hesitate to contact us.
+      </p>
+    </div>
+  </section>
+
+  {/* FAQs */}
+  <section style="background-color: #F7F3EA; padding: 48px 24px 96px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      
+      {/* Admissions */}
+      <div style="margin-bottom: 64px;">
+        <h2 style="font-family: var(--heading-font); font-size: 36px; color: #123EAB; margin-bottom: 32px; font-weight: 600; padding-bottom: 16px; border-bottom: 3px solid #123EAB;">Admissions</h2>
+        
+        <div style="display: grid; gap: 32px;">
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">When should I apply?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              We accept applications year-round on a rolling basis. However, we recommend applying by February 1 for fall enrollment to ensure space availability and priority consideration for financial aid. Many grade levels fill up early.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Do you accept mid-year enrollments?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Yes, we accept mid-year enrollments on a space-available basis. Contact our admissions office to inquire about current openings.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">What are you looking for in applicant families?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              We seek families who share our commitment to Christ-centered education and are excited about our classical, Montessori-inspired approach. We look for alignment with our mission, values, and Statement of Faith, as well as a desire to partner with us in your child's education.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Programs & Curriculum */}
+      <div style="margin-bottom: 64px;">
+        <h2 style="font-family: var(--heading-font); font-size: 36px; color: #123EAB; margin-bottom: 32px; font-weight: 600; padding-bottom: 16px; border-bottom: 3px solid #123EAB;">Programs & Curriculum</h2>
+        
+        <div style="display: grid; gap: 32px;">
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">What ages do you serve?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              We serve children from 6 weeks old through 6th grade, with plans to expand to 8th grade in the coming years. Our Early Childhood program includes infant/toddler (6 weeks-3 years), preschool (ages 3-4), and Pre-K/Kindergarten (ages 4-6). Our Elementary program serves grades 1-6.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">What is classical Christian education?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Classical Christian education recovers the time-tested methods of the classical tradition and integrates them with a biblical worldview. It emphasizes grammar, logic, and rhetoric; trains students to think critically and communicate effectively; and uses great books and primary sources to cultivate wisdom and virtue.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">How do you integrate Montessori with classical education?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              In our Early Childhood program, we use Montessori methods that align beautifully with classical education: hands-on learning, multi-age classrooms, individualized pacing, and cultivation of independence. As students progress to elementary, we transition to a more traditional classical model while retaining the best of Montessori's respect for the child and love of learning.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Do you offer specials or enrichment classes?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Yes! All students participate in music, art, physical education, and weekly chapel services. We also incorporate Latin beginning in elementary grades and offer seasonal enrichment opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Faith & Community */}
+      <div style="margin-bottom: 64px;">
+        <h2 style="font-family: var(--heading-font); font-size: 36px; color: #123EAB; margin-bottom: 32px; font-weight: 600; padding-bottom: 16px; border-bottom: 3px solid #123EAB;">Faith & Community</h2>
+        
+        <div style="display: grid; gap: 32px;">
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Do families need to be Orthodox Christian to attend?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              While St. Mark's is rooted in the Orthodox Christian tradition, we welcome families from various Christian backgrounds who affirm our Statement of Faith and are supportive of Orthodox teachings being part of the school culture. We ask that all families respect and support our Christian mission and values.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">What does chapel look like?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Students gather weekly for chapel services that include Scripture reading, hymn singing, prayer, and age-appropriate teaching. Chapel is a time of worship and community building. Services are led by our chaplain or invited clergy and follow the Orthodox liturgical calendar.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">How are parents involved?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Parent partnership is central to our mission. We host family events, invite parent volunteers for field trips and classroom support, offer parent education opportunities, and maintain open communication between teachers and families. Many families form lasting friendships within our community.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Practical Questions */}
+      <div>
+        <h2 style="font-family: var(--heading-font); font-size: 36px; color: #123EAB; margin-bottom: 32px; font-weight: 600; padding-bottom: 16px; border-bottom: 3px solid #123EAB;">Practical Questions</h2>
+        
+        <div style="display: grid; gap: 32px;">
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">What are school hours?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Core school hours are 8:30 AM - 3:00 PM for elementary students and 9:00 AM - 2:30 PM for early childhood. Extended care is available from 7:00 AM - 6:00 PM for families who need it.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Do you provide transportation?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Currently we do not offer bus service. Most families drive their children or arrange carpools with other families in their area. We're happy to connect new families with others who live nearby.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">What is your class size?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              We maintain small class sizes to ensure personalized attention. Early Childhood classrooms have 12-16 students with 2 teachers. Elementary classrooms have 15-18 students with 1 teacher and assistant support.
+            </p>
+          </div>
+
+          <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+            <h3 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Is lunch provided?</h3>
+            <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+              Yes, we offer a nutritious hot lunch program daily. Families may choose to participate in the lunch program or send lunch from home. We accommodate food allergies and dietary restrictions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Still Have Questions */}
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Still Have Questions?</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        We're here to help! Contact our admissions office and we'll be happy to answer any questions.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; margin-bottom: 32px;">
+        <a href="tel:6309861100" style="font-family: var(--body-font); font-size: 18px; color: #F7F3EA; text-decoration: none; font-weight: 600;">
+          📞 (630) 986-1100
+        </a>
+        <a href="mailto:info@stmarkchristian.school" style="font-family: var(--body-font); font-size: 18px; color: #F7F3EA; text-decoration: none; font-weight: 600;">
+          ✉️ info@stmarkchristian.school
+        </a>
+      </div>
+      <a href="mailto:info@stmarkchristian.school" style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

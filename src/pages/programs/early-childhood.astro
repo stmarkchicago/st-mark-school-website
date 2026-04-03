@@ -1,0 +1,191 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { baseUrl } from '../../lib/base-url';
+
+const pageClass = 'early-childhood-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 400px; background-image: url(https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Early Childhood</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">Infants through Kindergarten · Ages 6 weeks – 6 years</p>
+    </div>
+  </section>
+
+  {/* Overview */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 48px; color: #123EAB; margin-bottom: 32px; text-align: center; font-weight: 600;">Where Wonder Begins</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #26303D; line-height: 1.8; text-align: center; margin-bottom: 48px;">
+        Our Montessori-inspired early childhood program creates a nurturing, Christ-centered environment where young children develop independence, confidence, and a lifelong love of learning.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 64px;">
+        <div>
+          <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 20px; font-weight: 600;">The Montessori Approach</h3>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            We follow the time-tested Montessori method, which honors the natural development of children and fosters independence, concentration, and self-discipline.
+          </p>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+            Children work with beautiful, hands-on materials in prepared environments designed to encourage exploration, discovery, and mastery at their own pace.
+          </p>
+          <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.8;">
+            Our classrooms integrate faith naturally throughout the day through prayer, Bible stories, and opportunities to practice love and service.
+          </p>
+        </div>
+        
+        <div>
+          <div style="height: 400px; background-image: url(https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Age Groups */}
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Our Programs</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        {/* Infant/Toddler */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start;">
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 8px; font-weight: 600;">Infant & Toddler</h3>
+              <p style="font-family: var(--body-font); font-size: 18px; color: #C8A64E; font-weight: 600;">6 weeks – 3 years</p>
+            </div>
+            <div>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+                Our youngest learners receive tender care in a safe, stimulating environment. We support each child's developmental milestones while fostering trust, security, and early independence.
+              </p>
+              <ul style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.8; padding-left: 20px;">
+                <li style="margin-bottom: 10px;">Low student-to-teacher ratios</li>
+                <li style="margin-bottom: 10px;">Developmentally appropriate materials</li>
+                <li style="margin-bottom: 10px;">Sensory exploration and motor development</li>
+                <li style="margin-bottom: 10px;">Language-rich environment</li>
+                <li style="margin-bottom: 10px;">Individualized care schedules</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Preschool */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start;">
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 8px; font-weight: 600;">Preschool</h3>
+              <p style="font-family: var(--body-font); font-size: 18px; color: #C8A64E; font-weight: 600;">Ages 3–4</p>
+            </div>
+            <div>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+                Preschoolers engage in purposeful work with Montessori materials in practical life, sensorial, language, mathematics, and cultural studies. They develop concentration, coordination, and independence.
+              </p>
+              <ul style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.8; padding-left: 20px;">
+                <li style="margin-bottom: 10px;">Multi-age classroom community</li>
+                <li style="margin-bottom: 10px;">Hands-on learning materials</li>
+                <li style="margin-bottom: 10px;">Grace and courtesy lessons</li>
+                <li style="margin-bottom: 10px;">Introduction to phonics and math concepts</li>
+                <li style="margin-bottom: 10px;">Art, music, and outdoor exploration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Pre-K & Kindergarten */}
+        <div style="background-color: #F7F3EA; padding: 48px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <div style="display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start;">
+            <div>
+              <h3 style="font-family: var(--heading-font); font-size: 32px; color: #123EAB; margin-bottom: 8px; font-weight: 600;">Pre-K & Kindergarten</h3>
+              <p style="font-family: var(--body-font); font-size: 18px; color: #C8A64E; font-weight: 600;">Ages 4–6</p>
+            </div>
+            <div>
+              <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8; margin-bottom: 20px;">
+                Our oldest early childhood students build strong foundations in reading, writing, and mathematics while developing problem-solving skills, creativity, and a love of learning that prepares them for elementary school.
+              </p>
+              <ul style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.8; padding-left: 20px;">
+                <li style="margin-bottom: 10px;">Advanced Montessori materials</li>
+                <li style="margin-bottom: 10px;">Phonics-based reading instruction</li>
+                <li style="margin-bottom: 10px;">Mathematical reasoning and operations</li>
+                <li style="margin-bottom: 10px;">Science, geography, and cultural studies</li>
+                <li style="margin-bottom: 10px;">Leadership opportunities in mixed-age classroom</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Learning Areas */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Areas of Learning</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Practical Life</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Everyday activities that build independence, coordination, and care for oneself, others, and the environment.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Sensorial</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Materials that refine the senses and develop classification, comparison, and discrimination skills.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Language</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Phonics, vocabulary enrichment, reading, and writing through hands-on materials and activities.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Mathematics</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Concrete materials that make abstract concepts tangible, building number sense and mathematical thinking.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Cultural Studies</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Geography, science, history, art, and music that open children's eyes to God's wonderful world.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 24px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Faith Formation</h3>
+          <p style="font-family: var(--body-font); font-size: 16px; color: #26303D; line-height: 1.7;">
+            Bible stories, prayer, and opportunities to practice kindness, gratitude, and service integrated throughout the day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section style="background-color: #123EAB; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #F7F3EA; margin-bottom: 24px; font-weight: 600;">Visit Our Early Childhood Classrooms</h2>
+      <p style="font-family: var(--body-font); font-size: 20px; color: #F7F3EA; line-height: 1.7; margin-bottom: 32px;">
+        See the beauty and wonder of a Montessori classroom in action. Schedule a visit today.
+      </p>
+      <a href={`${baseUrl}/admissions/visit`} style="display: inline-block; background-color: #F7F3EA; color: #123EAB; font-family: var(--button-font); font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 6px; text-decoration: none;">
+        Schedule a Visit
+      </a>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

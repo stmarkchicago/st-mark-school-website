@@ -1,0 +1,105 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'christian-education-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  <section style="position: relative; height: 300px; background-image: url(https://images.unsplash.com/photo-1471086569966-db3eebc25a59?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Christian Education</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">All truth is God's truth</p>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 32px; font-weight: 600;">Why Christian Education?</h2>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8; margin-bottom: 24px;">
+        At St. Mark's, we believe that education is inherently formative—it shapes not just what students know, but who they become. Because of this, we cannot separate faith from learning. Every subject, from mathematics to literature, reveals something of God's character and His created order.
+      </p>
+      <p style="font-family: var(--body-font); font-size: 19px; color: #26303D; line-height: 1.8;">
+        Christian education means seeing the world through the lens of Scripture, recognizing that Christ is "the way, the truth, and the life" (John 14:6) and that "all truth is God's truth," wherever it is found.
+      </p>
+    </div>
+  </section>
+
+  <section style="background-color: #FCFBF7; padding: 96px 24px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">What Makes Education Christian?</h2>
+      
+      <div style="display: grid; gap: 32px;">
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">A Biblical Worldview</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            We teach students to understand all of reality—history, science, literature, mathematics—in light of God's revelation in Scripture. The Bible provides the framework through which we interpret and understand the world.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Integration, Not Compartmentalization</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Rather than treating faith as a separate "subject," we integrate Christian truth into every discipline. Math class explores the order and beauty of God's creation. History examines God's providence in human affairs. Literature reveals the human condition and our need for redemption.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Formation in Virtue</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Christian education aims at more than intellectual knowledge—it seeks to form the whole person in wisdom and virtue. We want students who not only know the truth, but love it and live it.
+          </p>
+        </div>
+
+        <div style="background-color: #F7F3EA; padding: 40px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h3 style="font-family: var(--heading-font); font-size: 26px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">A Community of Faith</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Our school is more than an institution—it's a community united by shared faith and values. Teachers, parents, and students partner together in the work of formation, supporting and encouraging one another in the life of faith.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--heading-font); font-size: 42px; color: #123EAB; margin-bottom: 48px; text-align: center; font-weight: 600;">Faith Across the Curriculum</h2>
+      
+      <div style="display: grid; gap: 24px;">
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h4 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Mathematics</h4>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            The order, beauty, and precision of mathematics reflect the mind of the Creator. Students encounter the wonder of patterns, ratios, and geometric forms as gifts from God.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h4 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Science</h4>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Science is the study of God's creation. We explore the natural world with wonder and gratitude, recognizing the fingerprints of the Creator in every living thing.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h4 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">History</h4>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            History reveals God's providence and purpose. We study the past to understand how God has worked through human events and to discern His will for the present.
+          </p>
+        </div>
+
+        <div style="background-color: #FCFBF7; padding: 32px; border-radius: 8px; border: 1px solid #D8D2C4;">
+          <h4 style="font-family: var(--heading-font); font-size: 22px; color: #123EAB; margin-bottom: 12px; font-weight: 600;">Literature</h4>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.8;">
+            Great stories illuminate the human experience—our longings, failures, and hopes. Through literature we encounter truth, goodness, and beauty, and see our need for grace.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

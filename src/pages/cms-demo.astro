@@ -1,0 +1,182 @@
+---
+import MainLayout from '../layouts/main.astro';
+---
+
+<MainLayout pageClass="cms-demo">
+  <div style="max-width: 1000px; margin: 0 auto; padding: 60px 20px;">
+    <h1 style="font-family: var(--heading-font); font-size: 48px; color: var(--primary); margin-bottom: 20px;">
+      🎉 Content Management System
+    </h1>
+    
+    <p style="font-size: 20px; color: var(--muted-foreground); margin-bottom: 40px;">
+      Your site now has an easy-to-use admin panel for managing content!
+    </p>
+
+    <!-- Quick Start Card -->
+    <div style="background: var(--card); border: 2px solid var(--primary); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+      <h2 style="font-family: var(--heading-font); font-size: 32px; color: var(--primary); margin-bottom: 20px;">
+        🚀 Quick Start (2 Steps)
+      </h2>
+      
+      <div style="background: var(--muted); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+          Step 1: Start the CMS Backend
+        </h3>
+        <p style="margin-bottom: 10px;">Open a terminal and run:</p>
+        <code style="display: block; background: var(--background); padding: 15px; border-radius: 6px; font-family: monospace; margin-bottom: 10px;">
+          npm run cms
+        </code>
+        <p style="font-size: 14px; color: var(--muted-foreground);">
+          ✅ Keep this terminal running!
+        </p>
+      </div>
+
+      <div style="background: var(--muted); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+          Step 2: Access the Admin Panel
+        </h3>
+        <p style="margin-bottom: 15px;">Click the button below to open the CMS:</p>
+        <a 
+          href="/admin/" 
+          style="display: inline-block; background: var(--primary); color: var(--primary-foreground); padding: 15px 30px; border-radius: 6px; text-decoration: none; font-family: var(--button-font); font-size: 18px; font-weight: 600;"
+        >
+          Open Admin Panel →
+        </a>
+      </div>
+    </div>
+
+    <!-- What You Can Do -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="font-family: var(--heading-font); font-size: 32px; color: var(--foreground); margin-bottom: 20px;">
+        📝 What You Can Edit
+      </h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">📰</div>
+          <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+            News & Announcements
+          </h3>
+          <p style="color: var(--muted-foreground); font-size: 14px;">
+            Post school updates, blog articles, and announcements
+          </p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">📅</div>
+          <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+            Events
+          </h3>
+          <p style="color: var(--muted-foreground); font-size: 14px;">
+            Add upcoming events with dates, locations, and details
+          </p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">💬</div>
+          <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+            Testimonials
+          </h3>
+          <p style="color: var(--muted-foreground); font-size: 14px;">
+            Manage parent and student testimonials
+          </p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">👥</div>
+          <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+            Faculty & Staff
+          </h3>
+          <p style="color: var(--muted-foreground); font-size: 14px;">
+            Update teacher bios, photos, and contact info
+          </p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">🏠</div>
+          <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+            Homepage Settings
+          </h3>
+          <p style="color: var(--muted-foreground); font-size: 14px;">
+            Edit hero text, taglines, and button links
+          </p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">📞</div>
+          <h3 style="font-family: var(--heading-font); font-size: 20px; margin-bottom: 10px;">
+            Contact Info
+          </h3>
+          <p style="color: var(--muted-foreground); font-size: 14px;">
+            Update phone, email, address, and office hours
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%); opacity: 0.05; border-radius: 12px; padding: 40px; margin-bottom: 40px; position: relative;">
+      <div style="position: relative; z-index: 1;">
+        <h2 style="font-family: var(--heading-font); font-size: 32px; color: var(--foreground); margin-bottom: 20px;">
+          ✨ Features
+        </h2>
+        
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 10px 0; font-size: 18px;">
+            ✅ <strong>User-friendly interface</strong> - Like WordPress
+          </li>
+          <li style="padding: 10px 0; font-size: 18px;">
+            ✅ <strong>Image uploads</strong> - Drag & drop photos
+          </li>
+          <li style="padding: 10px 0; font-size: 18px;">
+            ✅ <strong>Rich text editor</strong> - Format text easily
+          </li>
+          <li style="padding: 10px 0; font-size: 18px;">
+            ✅ <strong>No code required</strong> - Anyone can use it
+          </li>
+          <li style="padding: 10px 0; font-size: 18px;">
+            ✅ <strong>Instant updates</strong> - Changes go live immediately
+          </li>
+          <li style="padding: 10px 0; font-size: 18px;">
+            ✅ <strong>Free forever</strong> - No subscription fees
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Documentation Links -->
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px;">
+      <h2 style="font-family: var(--heading-font); font-size: 28px; color: var(--foreground); margin-bottom: 20px;">
+        📚 Documentation
+      </h2>
+      
+      <div style="display: grid; gap: 15px;">
+        <a href="/CMS-SETUP.md" style="display: block; padding: 15px; background: var(--muted); border-radius: 8px; text-decoration: none; color: var(--foreground); transition: all 0.2s;">
+          <strong style="color: var(--primary);">CMS-SETUP.md</strong> - Quick start guide and setup instructions
+        </a>
+        
+        <a href="/CMS-GUIDE.md" style="display: block; padding: 15px; background: var(--muted); border-radius: 8px; text-decoration: none; color: var(--foreground); transition: all 0.2s;">
+          <strong style="color: var(--primary);">CMS-GUIDE.md</strong> - Complete user guide and features
+        </a>
+        
+        <a href="/CMS-COMPARISON.md" style="display: block; padding: 15px; background: var(--muted); border-radius: 8px; text-decoration: none; color: var(--foreground); transition: all 0.2s;">
+          <strong style="color: var(--primary);">CMS-COMPARISON.md</strong> - Why Decap CMS vs Webflow CMS
+        </a>
+
+        <a href="/news-example" style="display: block; padding: 15px; background: var(--muted); border-radius: 8px; text-decoration: none; color: var(--foreground); transition: all 0.2s;">
+          <strong style="color: var(--primary);">News Example Page</strong> - See how to use CMS data
+        </a>
+      </div>
+    </div>
+
+    <!-- Support Message -->
+    <div style="margin-top: 40px; padding: 30px; background: var(--secondary); border-radius: 12px; text-align: center;">
+      <p style="font-size: 18px; color: var(--foreground); margin-bottom: 15px;">
+        <strong>Need Help?</strong>
+      </p>
+      <p style="color: var(--muted-foreground);">
+        Check the documentation above or reach out for support!
+      </p>
+    </div>
+  </div>
+</MainLayout>

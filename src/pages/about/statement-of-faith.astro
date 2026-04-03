@@ -1,0 +1,82 @@
+---
+import MainLayout from '../../layouts/main.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const pageClass = 'statement-of-faith-page';
+---
+
+<MainLayout pageClass={pageClass}>
+  <Header client:only="react" />
+  
+  {/* Hero Section */}
+  <section style="position: relative; height: 350px; background-image: url(https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1600&q=80); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 42, 111, 0.75);"></div>
+    <div style="position: relative; z-index: 10; text-align: center; color: #F7F3EA; max-width: 900px; padding: 0 24px;">
+      <h1 style="font-family: var(--heading-font); font-size: 56px; font-weight: 600; margin-bottom: 20px; color: #F7F3EA;">Statement of Faith</h1>
+      <p style="font-family: var(--body-font); font-size: 22px; line-height: 1.6; color: #F7F3EA;">The foundation of our educational mission</p>
+    </div>
+  </section>
+
+  {/* Statement Content */}
+  <section style="background-color: #F7F3EA; padding: 96px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="background-color: #FCFBF7; padding: 64px; border-radius: 8px; border: 1px solid #D8D2C4; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        
+        <p style="font-family: var(--body-font); font-size: 18px; color: #26303D; line-height: 1.9; margin-bottom: 32px; font-style: italic;">
+          St. Mark Christian School stands on the historic Orthodox Christian faith as expressed in the ancient creeds and councils of the Church. We believe:
+        </p>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">The Triune God</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+            We believe in one God in three persons—Father, Son, and Holy Spirit—eternally existing in perfect unity and love. God is the creator and sustainer of all things, and in Him we live and move and have our being.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Jesus Christ</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+            We believe that Jesus Christ is fully God and fully man, conceived by the Holy Spirit and born of the Virgin Mary. He lived a sinless life, died on the cross for our sins, rose from the dead on the third day, and ascended into heaven where He reigns as Lord.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">The Holy Scriptures</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+            We believe the Bible is the inspired Word of God, authoritative in all matters of faith and practice. Scripture is to be read within the context of the Church's historic teaching and tradition.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Salvation and the Church</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+            We believe that salvation is a gift of God's grace received through faith in Jesus Christ. The Church is the Body of Christ, called to worship, witness, and serve in the world. Through baptism we are united with Christ and His people.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Human Dignity and Purpose</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+            We believe that every human being is created in the image of God and therefore possesses inherent dignity and worth. We are called to love God with all our heart, soul, mind, and strength, and to love our neighbors as ourselves.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-family: var(--heading-font); font-size: 28px; color: #123EAB; margin-bottom: 16px; font-weight: 600;">Education and Formation</h3>
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9;">
+            We believe that all truth is God's truth, and that education is a sacred calling to help young people discover truth, goodness, and beauty in all creation. Christian education forms the whole person—mind, body, and soul—for a life of virtue, service, and joy.
+          </p>
+        </div>
+
+        <div style="border-top: 2px solid #D8D2C4; padding-top: 32px; margin-top: 48px;">
+          <p style="font-family: var(--body-font); font-size: 17px; color: #26303D; line-height: 1.9; font-style: italic;">
+            This statement reflects our commitment to the historic Christian faith while allowing for diversity within orthodoxy. We welcome families from various Christian traditions who affirm these core beliefs and desire a Christ-centered education for their children.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:only="react" />
+</MainLayout>

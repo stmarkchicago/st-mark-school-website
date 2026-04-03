@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "heading": "Building Strong Foundations for the Future",
+    "subheading": "St. Mark Christian School offers Christ-centered education rooted in classical learning and the Montessori method.",
+    "backgroundImage": "/uploads/hero-background.jpg",
+    "primaryButtonText": "Schedule a Visit",
+    "primaryButtonLink": "/admissions/visit",
+    "secondaryButtonText": "Request Info",
+    "secondaryButtonLink": "/admissions/inquire"
+  },
+  "identityBar": {
+    "tagline1": "Christ-Centered Education",
+    "tagline2": "Classical & Montessori Method",
+    "tagline3": "Strong Family Partnerships"
+  }
+}
