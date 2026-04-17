@@ -1,3 +1,4 @@
+
 # Netlify configuration for St. Mark Christian School
 
 [build]
@@ -15,6 +16,13 @@
   NODE_VERSION = "20"
 
 # Redirect rules
+# Don't redirect admin panel - it uses static files
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/:splat"
+  status = 200
+
+# SPA fallback for all other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -36,3 +44,4 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 # Identity and Git Gateway are configured in the Netlify UI
+
