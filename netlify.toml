@@ -6,9 +6,6 @@
   
   # Publish directory
   publish = "dist"
-  
-  # Functions directory (if needed)
-  functions = "netlify/functions"
 
 [build.environment]
   # Node version
@@ -16,18 +13,39 @@
   # Set base path for the app
   PUBLIC_BASE_PATH = "/app"
 
-# Redirect rules
+# IMPORTANT: Order matters! Static files first, then dynamic routes
 
-# Admin panel at root level (required for Netlify Identity)
+# Serve static admin files (highest priority)
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/admin/*"
   to = "/admin/:splat"
   status = 200
+  force = true
+
+# Serve static files and assets
+[[redirects]]
+  from = "/_astro/*"
+  to = "/_astro/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/uploads/*"
+  to = "/uploads/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/downloads/*"
+  to = "/downloads/:splat"
+  status = 200
+  force = true
 
 # Handle root redirect to /app
 [[redirects]]
@@ -35,9 +53,15 @@
   to = "/app"
   status = 301
 
-# SPA fallback for all routes under /app (but not /admin)
+# All /app routes go to Netlify function
 [[redirects]]
   from = "/app/*"
+  to = "/.netlify/functions/entry"
+  status = 200
+
+# Catch-all for other requests
+[[redirects]]
+  from = "/*"
   to = "/.netlify/functions/entry"
   status = 200
 
@@ -52,8 +76,6 @@
 
 # Cache static assets
 [[headers]]
-  for = "/app/assets/*"
+  for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Identity and Git Gateway are configured in the Netlify UI
