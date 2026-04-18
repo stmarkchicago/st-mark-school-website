@@ -1,3 +1,4 @@
+
 # Netlify configuration for St. Mark Christian School
 
 [build]
@@ -10,8 +11,6 @@
 [build.environment]
   # Node version
   NODE_VERSION = "20"
-  # Set base path for the app
-  PUBLIC_BASE_PATH = "/app"
 
 # IMPORTANT: Order matters! Most specific routes first
 
@@ -60,16 +59,9 @@
   status = 200
   force = true
 
-# Redirect ONLY root to /app (not /admin or static files)
+# All other routes go to Netlify function (app runs at root)
 [[redirects]]
-  from = "/"
-  to = "/app"
-  status = 302
-  force = false
-
-# All /app routes go to Netlify function
-[[redirects]]
-  from = "/app/*"
+  from = "/*"
   to = "/.netlify/functions/entry"
   status = 200
 
@@ -87,3 +79,4 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
