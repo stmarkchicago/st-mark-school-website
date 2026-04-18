@@ -8,8 +8,5 @@
 # Netlify Identity
 /.netlify/*  /.netlify/:splat  200
 
-# App routes
-/app/*  /.netlify/functions/entry  200
-
-# Root redirect to /app
-/  /app  302
+# All routes (including root) go to the Netlify function
+/*  /.netlify/functions/entry  200
