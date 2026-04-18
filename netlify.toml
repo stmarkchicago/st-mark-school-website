@@ -16,12 +16,17 @@
   # Set base path for the app
   PUBLIC_BASE_PATH = "/app"
 
-# Redirect rules for /app base path
+# Redirect rules
 
-# Admin panel needs to be accessible at /app/admin
+# Admin panel at root level (required for Netlify Identity)
 [[redirects]]
-  from = "/app/admin/*"
-  to = "/app/admin/:splat"
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/:splat"
   status = 200
 
 # Handle root redirect to /app
@@ -30,10 +35,10 @@
   to = "/app"
   status = 301
 
-# SPA fallback for all routes under /app
+# SPA fallback for all routes under /app (but not /admin)
 [[redirects]]
   from = "/app/*"
-  to = "/app/index.html"
+  to = "/.netlify/functions/entry"
   status = 200
 
 # Headers for security
