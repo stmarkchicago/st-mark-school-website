@@ -11,4 +11,12 @@ export default defineConfig({
   adapter: netlify({
     edgeMiddleware: false,
   }),
+  vite: {
+    build: {
+      assetsInlineLimit: 0,
+    },
+  },
+  // Ensure public files including admin are copied
+  publicDir: './public',
 });
+
