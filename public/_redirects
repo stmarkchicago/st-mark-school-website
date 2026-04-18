@@ -1,0 +1,15 @@
+# Static files - serve directly
+/admin/*  /admin/:splat  200
+/_astro/*  /_astro/:splat  200
+/uploads/*  /uploads/:splat  200
+/downloads/*  /downloads/:splat  200
+/favicon.ico  /favicon.ico  200
+
+# Netlify Identity
+/.netlify/*  /.netlify/:splat  200
+
+# App routes
+/app/*  /.netlify/functions/entry  200
+
+# Root redirect to /app
+/  /app  302
