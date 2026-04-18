@@ -13,9 +13,9 @@
   # Set base path for the app
   PUBLIC_BASE_PATH = "/app"
 
-# IMPORTANT: Order matters! Static files first, then dynamic routes
+# IMPORTANT: Order matters! Most specific routes first
 
-# Serve static admin files (highest priority)
+# Serve admin panel at root (DO NOT redirect to /app)
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
@@ -28,7 +28,7 @@
   status = 200
   force = true
 
-# Serve static files and assets
+# Serve static assets (DO NOT redirect to /app)
 [[redirects]]
   from = "/_astro/*"
   to = "/_astro/:splat"
@@ -47,21 +47,29 @@
   status = 200
   force = true
 
-# Handle root redirect to /app
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.ico"
+  status = 200
+  force = true
+
+# Netlify Identity endpoints (DO NOT redirect)
+[[redirects]]
+  from = "/.netlify/*"
+  to = "/.netlify/:splat"
+  status = 200
+  force = true
+
+# Redirect ONLY root to /app (not /admin or static files)
 [[redirects]]
   from = "/"
   to = "/app"
-  status = 301
+  status = 302
+  force = false
 
 # All /app routes go to Netlify function
 [[redirects]]
   from = "/app/*"
-  to = "/.netlify/functions/entry"
-  status = 200
-
-# Catch-all for other requests
-[[redirects]]
-  from = "/*"
   to = "/.netlify/functions/entry"
   status = 200
 
