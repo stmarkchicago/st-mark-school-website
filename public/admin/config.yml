@@ -1,4 +1,5 @@
 
+
 backend:
   name: git-gateway
   branch: main
@@ -8,7 +9,7 @@ backend:
 # local_backend: true
 
 media_folder: "public/uploads"
-public_folder: "/uploads"
+public_folder: "/app/uploads"
 
 collections:
   # News & Stories
@@ -127,4 +128,5 @@ collections:
       - {label: "Caption", name: "caption", widget: "text", required: false}
       - {label: "Category", name: "category", widget: "select", options: ["Classroom", "Events", "Campus", "Students", "Activities"]}
       - {label: "Display on Homepage", name: "featured", widget: "boolean", default: false}
+
 

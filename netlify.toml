@@ -1,4 +1,3 @@
-
 # Netlify configuration for St. Mark Christian School
 
 [build]
@@ -14,18 +13,27 @@
 [build.environment]
   # Node version
   NODE_VERSION = "20"
+  # Set base path for the app
+  PUBLIC_BASE_PATH = "/app"
 
-# Redirect rules
-# Don't redirect admin panel - it uses static files
+# Redirect rules for /app base path
+
+# Admin panel needs to be accessible at /app/admin
 [[redirects]]
-  from = "/admin/*"
-  to = "/admin/:splat"
+  from = "/app/admin/*"
+  to = "/app/admin/:splat"
   status = 200
 
-# SPA fallback for all other routes
+# Handle root redirect to /app
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/"
+  to = "/app"
+  status = 301
+
+# SPA fallback for all routes under /app
+[[redirects]]
+  from = "/app/*"
+  to = "/app/index.html"
   status = 200
 
 # Headers for security
@@ -39,9 +47,8 @@
 
 # Cache static assets
 [[headers]]
-  for = "/assets/*"
+  for = "/app/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 # Identity and Git Gateway are configured in the Netlify UI
-
