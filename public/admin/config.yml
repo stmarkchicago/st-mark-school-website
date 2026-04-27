@@ -1,10 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: stmarkchicago/st-mark-school-website
   branch: main
-
-# Optional: Set your site URL (replace with your actual Netlify URL)
-# You can find this in your Netlify dashboard
-site_url: https://stmarkchristian.school
+  base_url: https://new.stmarkchristian.school
+  auth_endpoint: /app/api/auth
+  client_id: Ov23li7U1ttSLNIYVyE7
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -16,12 +16,13 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Category", name: "category", widget: "select", options: ["Announcement", "Event Recap", "Educational Insight", "Community News"] }
 
   - name: "events"
     label: "Events"
@@ -29,12 +30,14 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "date", widget: "datetime"}
-      - {label: "End Date", name: "endDate", widget: "datetime", required: false}
-      - {label: "Location", name: "location", widget: "string", required: false}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown"}
+      - { label: "Event Name", name: "title", widget: "string" }
+      - { label: "Start Date & Time", name: "startDate", widget: "datetime" }
+      - { label: "End Date & Time", name: "endDate", widget: "datetime", required: false }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Short Description", name: "summary", widget: "text" }
+      - { label: "Full Description", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "RSVP Link", name: "rsvpLink", widget: "string", required: false }
 
   - name: "testimonials"
     label: "Testimonials"
@@ -42,8 +45,28 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Parent Name", name: "name", widget: "string"}
-      - {label: "Children Info", name: "children", widget: "string"}
-      - {label: "Quote", name: "quote", widget: "text"}
-      - {label: "Full Testimonial", name: "body", widget: "markdown", required: false}
-      - {label: "Photo", name: "image", widget: "image", required: false}
+      - { label: "Parent Name(s)", name: "title", widget: "string" }
+      - { label: "Children's Grades", name: "grades", widget: "string" }
+      - { label: "Testimonial", name: "body", widget: "markdown" }
+      - { label: "Photo", name: "image", widget: "image", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Contact Information"
+        name: "contact"
+        file: "content/settings/contact.json"
+        fields:
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Office Hours", name: "hours", widget: "text" }
+      - label: "Homepage Settings"
+        name: "homepage"
+        file: "content/settings/homepage.json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Button Text", name: "heroButtonText", widget: "string" }
+          - { label: "Hero Button Link", name: "heroButtonLink", widget: "string" }
