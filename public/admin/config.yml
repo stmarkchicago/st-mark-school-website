@@ -1,9 +1,10 @@
 backend:
-  name: github
-  repo: stmarkchicago/st-mark-school-website
+  name: git-gateway
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+
+# Optional: Set your site URL (replace with your actual Netlify URL)
+# You can find this in your Netlify dashboard
+site_url: https://stmarkchristian.school
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -11,36 +12,38 @@ public_folder: "/uploads"
 collections:
   - name: "news"
     label: "News & Stories"
-    folder: "src/content/news"
+    folder: "content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "events"
     label: "Events"
-    folder: "src/content/events"
+    folder: "content/events"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime"}
-      - {label: "Location", name: "location", widget: "string"}
-      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "End Date", name: "endDate", widget: "datetime", required: false}
+      - {label: "Location", name: "location", widget: "string", required: false}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown"}
 
   - name: "testimonials"
     label: "Testimonials"
-    folder: "src/content/testimonials"
+    folder: "content/testimonials"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Parent Name", name: "name", widget: "string"}
+      - {label: "Children Info", name: "children", widget: "string"}
       - {label: "Quote", name: "quote", widget: "text"}
-      - {label: "Full Testimonial", name: "body", widget: "markdown"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Full Testimonial", name: "body", widget: "markdown", required: false}
+      - {label: "Photo", name: "image", widget: "image", required: false}
