@@ -23,12 +23,11 @@ import { baseUrl } from '../lib/base-url';
     window.initCMS({
       config: {
         backend: {
-          name: 'github',
-          repo: 'stmarkchicago/st-mark-school-website',
-          branch: 'main',
-          base_url: 'https://new.stmarkchristian.school',
-          auth_endpoint: baseUrl + 'app/api/auth'
-        },
+  name: 'github',
+  repo: 'stmarkchicago/st-mark-school-website',
+  branch: 'main',
+  auth_endpoint: 'https://new.stmarkchristian.school/app/api/auth'
+},
         site_url: 'https://stmarkchristian.school',
         media_folder: 'public/uploads',
         public_folder: baseUrl + '/uploads',
