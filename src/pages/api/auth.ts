@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-export const GET: APIRoute = async ({ url, redirect }) => {
+export const GET: APIRoute = async ({ url }) => {
   const code = url.searchParams.get('code');
 
   if (!code) {
@@ -9,7 +9,12 @@ export const GET: APIRoute = async ({ url, redirect }) => {
     const redirectUri = `${url.origin}/app/api/auth`;
     const githubUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=repo,user`;
 
-    return redirect(githubUrl);
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: githubUrl,
+      },
+    });
   }
 
   // This is the callback from GitHub - exchange code for token
