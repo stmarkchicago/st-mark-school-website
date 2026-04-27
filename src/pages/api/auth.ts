@@ -1,18 +1,22 @@
 import type { APIRoute } from 'astro';
 
-const CLIENT_ID = 'Ov23li7U1ttSLNIYVyE7';
-const CLIENT_SECRET = '2df48cc361e2ebc6a364b2ec7dcc3825c60ba86a';
-
-export const GET: APIRoute = async ({ request, redirect }) => {
-  const url = new URL(request.url);
+export const GET: APIRoute = async ({ url, redirect }) => {
   const code = url.searchParams.get('code');
 
   if (!code) {
-    return new Response('Missing code parameter', { status: 400 });
+    // This is the initial request - redirect to GitHub OAuth
+    const clientId = 'Ov23li7U1ttSLNIYVyE7';
+    const redirectUri = `${url.origin}/app/api/auth`;
+    const githubUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=repo,user`;
+
+    return redirect(githubUrl);
   }
 
+  // This is the callback from GitHub - exchange code for token
+  const CLIENT_ID = 'Ov23li7U1ttSLNIYVyE7';
+  const CLIENT_SECRET = '2df48cc361e2ebc6a364b2ec7dcc3825c60ba86a';
+
   try {
-    // Exchange code for access token
     const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
       headers: {
@@ -32,7 +36,7 @@ export const GET: APIRoute = async ({ request, redirect }) => {
       return new Response(`OAuth error: ${data.error_description}`, { status: 400 });
     }
 
-    // Return the token in a format Decap CMS expects
+    // Return success page that communicates with CMS
     return new Response(
       `<!DOCTYPE html>
 <html>
@@ -41,18 +45,17 @@ export const GET: APIRoute = async ({ request, redirect }) => {
   <title>Authorizing...</title>
 </head>
 <body>
+  <p>Authorization successful. Closing window...</p>
   <script>
     (function() {
       function receiveMessage(e) {
-        console.log("receiveMessage", e);
         window.opener.postMessage(
-          'authorization:github:success:${JSON.stringify(data)}',
+          'authorization:github:success:' + JSON.stringify(${JSON.stringify(data)}),
           e.origin
         );
         window.removeEventListener("message", receiveMessage, false);
       }
       window.addEventListener("message", receiveMessage, false);
-      console.log("Posting message to opener");
       window.opener.postMessage("authorizing:github", "*");
     })();
   </script>
