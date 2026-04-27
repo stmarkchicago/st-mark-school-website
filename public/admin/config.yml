@@ -4,7 +4,6 @@ backend:
   branch: main
   base_url: https://new.stmarkchristian.school
   auth_endpoint: /app/api/auth
-  client_id: Ov23li7U1ttSLNIYVyE7
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
