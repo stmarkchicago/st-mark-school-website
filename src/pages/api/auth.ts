@@ -6,7 +6,8 @@ export const GET: APIRoute = async ({ url }) => {
   if (!code) {
     // This is the initial request - redirect to GitHub OAuth
     const clientId = 'Ov23li7U1ttSLNIYVyE7';
-    const redirectUri = `${url.origin}/app/api/auth`;
+    // Use the custom domain instead of url.origin
+const redirectUri = 'https://new.stmarkchristian.school/app/api/auth';
     const githubUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=repo,user`;
 
     return new Response(null, {
