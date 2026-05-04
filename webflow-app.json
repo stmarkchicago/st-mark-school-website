@@ -1,0 +1,21 @@
+{
+  "name": "St. Mark Christian School",
+  "description": "Official website for St. Mark Christian School featuring programs, admissions, and community information",
+  "version": "1.0.0",
+  "type": "custom-app",
+  "runtime": {
+    "platform": "cloudflare-workers",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist"
+  },
+  "routes": [
+    {
+      "path": "/*",
+      "handler": "index"
+    }
+  ],
+  "features": {
+    "cms": true,
+    "authentication": false
+  }
+}
