@@ -1,0 +1,7 @@
+# Secrets are private credentials, like API keys or passwords
+# Store secrets here as KEY="value" pairs (e.g., MY_SECRET_KEY="sec123456")
+# AI Assistant uses these only when necessary to complete your requests
+
+# OpenAI API Key for Chat Assistant
+# Get your API key from: https://platform.openai.com/api-keys
+OPENAI_API_KEY=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
