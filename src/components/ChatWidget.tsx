@@ -78,8 +78,9 @@ export default function ChatWidget() {
       {/* Chat Button - Fixed to bottom right */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#123eab] hover:bg-[#0d2d7f] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+        className="fixed bottom-6 right-6 z-[9999] w-14 h-14 bg-[#123eab] hover:bg-[#0d2d7f] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
         aria-label="Open chat"
+        style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999 }}
       >
         {isOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -94,7 +95,7 @@ export default function ChatWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden border border-gray-200">
+        <div className="fixed bottom-24 right-6 z-[9999] w-96 h-[500px] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden border border-gray-200">
           {/* Header */}
           <div className="bg-[#123eab] text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
