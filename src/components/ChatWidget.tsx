@@ -47,21 +47,11 @@ export default function ChatWidget() {
         throw new Error('Failed to get response');
       }
 
-      const text = await response.text();
-
-      // Parse the streaming response
-      const lines = text.split('\n').filter(line => line.trim());
-      let assistantMessage = '';
-
-      for (const line of lines) {
-        if (line.startsWith('0:"')) {
-          const content = line.slice(3, -2); // Remove 0:" and "
-          assistantMessage += content;
-        }
-      }
+      const data = await response.json();
+      const assistantMessage = data.message || 'Sorry, I received an empty response. Please try again.';
 
       // Add assistant message
-      setMessages(prev => [...prev, { role: 'assistant', content: assistantMessage.trim() }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: assistantMessage }]);
     } catch (error) {
       console.error('Chat error:', error);
       setMessages(prev => [...prev, { 
@@ -71,6 +61,38 @@ export default function ChatWidget() {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // Function to render formatted text with markdown-like formatting
+  const renderFormattedText = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, index) => {
+      // Bold text (**text**)
+      if (line.includes('**')) {
+        const parts = line.split('**');
+        return (
+          <p key={index} style={{ margin: '8px 0' }}>
+            {parts.map((part, i) => 
+              i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+            )}
+          </p>
+        );
+      }
+      // Bullet points (-)
+      if (line.trim().startsWith('-')) {
+        return (
+          <div key={index} style={{ marginLeft: '16px', margin: '4px 0' }}>
+            • {line.trim().substring(1).trim()}
+          </div>
+        );
+      }
+      // Empty lines
+      if (line.trim() === '') {
+        return <div key={index} style={{ height: '8px' }} />;
+      }
+      // Regular text
+      return <p key={index} style={{ margin: '4px 0' }}>{line}</p>;
+    });
   };
 
   return (
@@ -227,13 +249,15 @@ export default function ChatWidget() {
                     style={{
                       maxWidth: '80%',
                       borderRadius: '8px',
-                      padding: '8px 16px',
+                      padding: '12px 16px',
                       backgroundColor: message.role === 'user' ? '#123eab' : 'white',
                       color: message.role === 'user' ? 'white' : '#1f2937',
-                      border: message.role === 'user' ? 'none' : '1px solid #e5e7eb'
+                      border: message.role === 'user' ? 'none' : '1px solid #e5e7eb',
+                      fontSize: '14px',
+                      lineHeight: '1.5'
                     }}
                   >
-                    <p style={{ fontSize: '14px', margin: 0, whiteSpace: 'pre-wrap' }}>{message.content}</p>
+                    {message.role === 'assistant' ? renderFormattedText(message.content) : <p style={{ margin: 0 }}>{message.content}</p>}
                   </div>
                 </div>
               ))}
@@ -301,13 +325,3 @@ export default function ChatWidget() {
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" style={{ width: '20px', height: '20px' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
