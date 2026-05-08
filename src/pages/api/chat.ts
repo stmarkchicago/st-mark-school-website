@@ -159,13 +159,11 @@ export const POST: APIRoute = async ({ request }) => {
     // Find the best response
     const response = findBestResponse(userMessage);
 
-    // Simulate streaming response format
-    const streamData = response.split(' ').map(word => `0:"${word} "\n`).join('');
-
-    return new Response(streamData, {
+    // Return as simple JSON
+    return new Response(JSON.stringify({ message: response }), {
       status: 200,
       headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
+        'Content-Type': 'application/json',
       }
     });
 
